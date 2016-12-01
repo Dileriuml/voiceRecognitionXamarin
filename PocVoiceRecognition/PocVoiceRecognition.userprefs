@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VoiceRecognition.Ios/VoiceRecognitionView.cs">
+    <Files>
+      <File FileName="VoiceRecognition.Ios/VoiceRecognitionView.cs" Line="73" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PocVoiceRecognition" expanded="True">
+            <Node name="VoiceRecognition.Ios" expanded="True">
+              <Node name="VoiceRecognitionView.cs" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Catchpoint enabled="false" exceptionName="System.Exception" includeSubclasses="True" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.VoiceRecognition.Ios PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.ItemProperties.PocVoiceRecognition AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" />
+</Properties>

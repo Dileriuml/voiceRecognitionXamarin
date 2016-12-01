@@ -1,0 +1,76 @@
+﻿using Android.App;
+using Android.Widget;
+using Android.OS;
+using Android.Speech;
+using Android.Content;
+using Java.Util;
+
+namespace PocVoiceRecognition
+{
+	[Activity(Label = "Poc VoiceRecognition", MainLauncher = true, Icon = "@mipmap/icon")]
+	public class MainActivity : Activity
+	{
+		private const int VoiceCode = 100;
+		private EditText textEdit;
+
+		protected override void OnCreate(Bundle savedInstanceState)
+		{
+			base.OnCreate(savedInstanceState);
+
+			// Set our view from the "main" layout resource
+			SetContentView(Resource.Layout.Main);
+
+			textEdit = FindViewById<EditText>(Resource.Id.editText);
+			// Get our button from the layout resource,
+			// and attach an event to it
+			Button button = FindViewById<Button>(Resource.Id.myButton);
+
+			button.Click += ButtonClick;
+
+		}
+
+		private void ButtonClick(object sender, System.EventArgs e)
+		{
+			var voiceIntent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
+			voiceIntent.PutExtra(RecognizerIntent.ExtraLanguageModel, RecognizerIntent.LanguageModelFreeForm);
+			voiceIntent.PutExtra(RecognizerIntent.ExtraPrompt, "English, motherfucker, do you speak it?");
+			voiceIntent.PutExtra(RecognizerIntent.ExtraSpeechInputCompleteSilenceLengthMillis, 1500);
+			voiceIntent.PutExtra(RecognizerIntent.ExtraSpeechInputPossiblyCompleteSilenceLengthMillis, 1500);
+			voiceIntent.PutExtra(RecognizerIntent.ExtraSpeechInputMinimumLengthMillis, 15000);
+			voiceIntent.PutExtra(RecognizerIntent.ExtraMaxResults, 1);
+			voiceIntent.PutExtra(RecognizerIntent.ExtraLanguage, Locale.Default);
+
+			try
+			{
+				StartActivityForResult(voiceIntent, VoiceCode);
+			}
+			catch (ActivityNotFoundException a)
+			{
+				Toast.MakeText(ApplicationContext, "No activity to recognize speech", ToastLength.Short).Show();
+			}
+		}
+
+		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+		{
+			if (requestCode == VoiceCode)
+			{
+				if (resultCode == Result.Ok)
+				{
+					var matches = data.GetStringArrayListExtra(RecognizerIntent.ExtraResults);
+					if (matches.Count != 0)
+					{
+						string textInput = matches[0];
+						textEdit.Text = textInput;
+					}
+				}
+				else
+				{
+					textEdit.Text = "No text recognized";
+				}
+			}
+				
+			base.OnActivityResult(requestCode, resultCode, data);
+		}
+	}
+}
+

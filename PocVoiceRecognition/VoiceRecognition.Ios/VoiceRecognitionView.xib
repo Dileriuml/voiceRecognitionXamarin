@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoiceRecognitionView">
+            <connections>
+                <outlet property="RecognizeButton" destination="7cI-AD-d2u" id="5uj-Ts-Ycm"/>
+                <outlet property="TextField" destination="uNV-pv-Xsd" id="ghy-ub-33t"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uNV-pv-Xsd" userLabel="TextField">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="SBp-h2-HtZ"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="TextField:" destination="-1" eventType="editingDidEnd" id="Q0e-WR-6Ib"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-AD-d2u">
+                    <state key="normal" title="Recognize"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7cI-AD-d2u" firstAttribute="top" secondItem="uNV-pv-Xsd" secondAttribute="bottom" constant="15" id="4jI-19-TF9"/>
+                <constraint firstItem="7cI-AD-d2u" firstAttribute="leading" secondItem="uNV-pv-Xsd" secondAttribute="leading" id="DGh-QO-90J"/>
+                <constraint firstAttribute="trailing" secondItem="uNV-pv-Xsd" secondAttribute="trailing" constant="10" id="Mnx-xK-Xm6"/>
+                <constraint firstItem="uNV-pv-Xsd" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="10" id="NTJ-aq-hfD"/>
+                <constraint firstItem="uNV-pv-Xsd" firstAttribute="top" secondItem="2" secondAttribute="top" constant="10" id="pGo-xk-9I3"/>
+                <constraint firstItem="7cI-AD-d2u" firstAttribute="centerX" secondItem="2" secondAttribute="centerX" id="xBz-gb-mVh"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
