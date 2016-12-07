@@ -5,6 +5,8 @@ using UIKit;
 using Foundation;
 using AVFoundation;
 
+// Hi
+
 namespace VoiceRecognition.Ios
 {
 	public partial class VoiceRecognitionView : UIViewController
