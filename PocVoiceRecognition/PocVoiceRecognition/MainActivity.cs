@@ -7,7 +7,8 @@ using Java.Util;
 
 namespace PocVoiceRecognition
 {
-	[Activity(Label = "Poc VoiceRecognition", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(Label = "Can I", MainLauncher = true, Icon = "@mipmap/icon")]
+	[IntentFilter(new[] { "com.google.android.gms.actions.SEARCH_ACTION" }, Label = "Can I", Categories = new[] { "android.intent.category.DEFAULT" })]
 	public class MainActivity : Activity
 	{
 		private const int VoiceCode = 100;
@@ -27,13 +28,19 @@ namespace PocVoiceRecognition
 
 			button.Click += ButtonClick;
 
+			if (Intent.Action == Intent.ActionSearch)
+			{
+				var queryContent = Intent.GetStringExtra(SearchManager.Query);
+				// You can perform search from here
+				textEdit.Text = queryContent;
+			}
 		}
 
 		private void ButtonClick(object sender, System.EventArgs e)
 		{
 			var voiceIntent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
 			voiceIntent.PutExtra(RecognizerIntent.ExtraLanguageModel, RecognizerIntent.LanguageModelFreeForm);
-			voiceIntent.PutExtra(RecognizerIntent.ExtraPrompt, "English, motherfucker, do you speak it?");
+			voiceIntent.PutExtra(RecognizerIntent.ExtraPrompt, "Can I ...");
 			voiceIntent.PutExtra(RecognizerIntent.ExtraSpeechInputCompleteSilenceLengthMillis, 1500);
 			voiceIntent.PutExtra(RecognizerIntent.ExtraSpeechInputPossiblyCompleteSilenceLengthMillis, 1500);
 			voiceIntent.PutExtra(RecognizerIntent.ExtraSpeechInputMinimumLengthMillis, 15000);
@@ -68,7 +75,7 @@ namespace PocVoiceRecognition
 					textEdit.Text = "No text recognized";
 				}
 			}
-				
+
 			base.OnActivityResult(requestCode, resultCode, data);
 		}
 	}

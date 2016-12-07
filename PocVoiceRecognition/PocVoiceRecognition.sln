@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PocVoiceRecognition", "PocVoiceRecognition\PocVoiceRecognition.csproj", "{D826573E-B040-40C5-A3D7-F135268128E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanI", "PocVoiceRecognition\CanI.csproj", "{D826573E-B040-40C5-A3D7-F135268128E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceRecognition.Ios", "VoiceRecognition.Ios\VoiceRecognition.Ios.csproj", "{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}"
 EndProject

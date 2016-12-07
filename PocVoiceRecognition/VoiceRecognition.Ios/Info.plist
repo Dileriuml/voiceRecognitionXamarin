@@ -5,7 +5,7 @@
 	<key>CFBundleName</key>
 	<string>VoiceRecognition.Ios</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.voicerecognition-ios</string>
+	<string>com.dileriuml.pocvoice</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
