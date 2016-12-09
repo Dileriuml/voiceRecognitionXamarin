@@ -48,7 +48,7 @@ namespace CanI.Ios
 			// Take action based on the activity type
 			switch (userActivity.ActivityType)
 			{
-				case "com.trinetix.handlemassage":
+				case "com.trinetix.handlemessage":
 					Controller.HandleText(userActivity.UserInfo.ValueForKey(new NSString("message")).ToString());
 					break;
 			}

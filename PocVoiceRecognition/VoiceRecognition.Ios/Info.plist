@@ -45,7 +45,7 @@
 	<string>CanI</string>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>com.trinetix.handlemassage</string>
+		<string>com.trinetix.handlemessage</string>
 	</array>
 </dict>
 </plist>

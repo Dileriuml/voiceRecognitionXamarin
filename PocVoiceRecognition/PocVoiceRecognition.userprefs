@@ -1,28 +1,25 @@
 ﻿<Properties StartupConfiguration="{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}|Default">
   <MonoDevelop.Ide.ItemProperties.CanI AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="VoiceRecognition.Ios/VoiceRecognitionView.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Intents.Ios/IntentHandler.cs">
     <Files>
-      <File FileName="VoiceRecognition.Ios/VoiceRecognitionView.cs" Line="48" Column="3" />
-      <File FileName="PocVoiceRecognition/MainActivity.cs" Line="68" Column="7" />
-      <File FileName="VoiceRecognition.Ios/AppDelegate.cs" Line="24" Column="29" />
       <File FileName="../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/10.4.0.20/lib/msbuild/iOS/Xamarin.iOS.Common.targets" Line="1" Column="1" />
-      <File FileName="VoiceRecognition.Ios/Main.cs" Line="1" Column="1" />
+      <File FileName="VoiceRecognition.Ios/Main.cs" Line="16" Column="1" />
       <File FileName="Intents.Ios/Info.plist" />
-      <File FileName="Intents.Ios/IntentHandler.cs" Line="73" Column="33" />
-      <File FileName="VoiceRecognition.Ios/Entitlements.plist" />
-      <File FileName="VoiceRecognition.Ios/Info.plist" />
+      <File FileName="Intents.Ios/IntentHandler.cs" Line="80" Column="1" />
       <File FileName="VoiceRecognition.Ios/Resources/CanI.Ios.entitlements" Line="1" Column="1" />
       <File FileName="Intents.Ios/Entitlements.plist" />
       <File FileName="VoiceRecognition.Ios/VoiceRecognitionView.designer.cs" Line="1" Column="1" />
+      <File FileName="VoiceRecognition.Ios/Entitlements.plist" />
+      <File FileName="VoiceRecognition.Ios/Info.plist" />
+      <File FileName="VoiceRecognition.Ios/AppIntentVocabulary.plist" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="PocVoiceRecognition" expanded="True">
+          <Node name="PocVoiceRecognition" expanded="True" selected="True">
             <Node name="CanI" expanded="True" />
             <Node name="CanI.Ios" expanded="True">
-              <Node name="Resources" expanded="True" />
-              <Node name="VoiceRecognitionView.cs" expanded="True" selected="True" />
+              <Node name="VoiceRecognitionView.cs" expanded="True" />
             </Node>
             <Node name="Intents.Ios" expanded="True" />
           </Node>
@@ -30,7 +27,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Catchpoint enabled="false" exceptionName="System.Exception" includeSubclasses="True" />

@@ -107,6 +107,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="AppIntentVocabulary.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
