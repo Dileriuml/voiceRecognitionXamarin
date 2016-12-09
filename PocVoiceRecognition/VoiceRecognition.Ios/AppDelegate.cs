@@ -1,7 +1,8 @@
 ﻿using Foundation;
 using UIKit;
+using Intents;
 
-namespace VoiceRecognition.Ios
+namespace CanI.Ios
 {
 	// The UIApplicationDelegate for the application. This class is responsible for launching the
 	// User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
@@ -16,11 +17,43 @@ namespace VoiceRecognition.Ios
 			set;
 		}
 
+		public VoiceRecognitionView Controller { get; set; }
+
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
+			// Request access to Siri
+			INPreferences.RequestSiriAuthorization((INSiriAuthorizationStatus status) =>
+					{
+						// Respond to returned status
+						switch (status)
+						{
+							case INSiriAuthorizationStatus.Authorized:
+								break;
+							case INSiriAuthorizationStatus.Denied:
+								break;
+							case INSiriAuthorizationStatus.NotDetermined:
+								break;
+							case INSiriAuthorizationStatus.Restricted:
+								break;
+						}
+					});
 			// Override point for customization after application launch.
 			// If not required for your application you can safely delete this method
 			Window.RootViewController = new VoiceRecognitionView();
+			return true;
+		}
+
+		public override bool ContinueUserActivity(UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+		{
+			// Take action based on the activity type
+			switch (userActivity.ActivityType)
+			{
+				case "com.trinetix.handlemassage":
+					Controller.HandleText(userActivity.UserInfo.ValueForKey(new NSString("message")).ToString());
+					break;
+			}
+
+			// Inform system this is handled
 			return true;
 		}
 

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanI", "PocVoiceRecognition\CanI.csproj", "{D826573E-B040-40C5-A3D7-F135268128E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceRecognition.Ios", "VoiceRecognition.Ios\VoiceRecognition.Ios.csproj", "{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanI.Ios", "VoiceRecognition.Ios\CanI.Ios.csproj", "{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intents.Ios", "Intents.Ios\Intents.Ios.csproj", "{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,5 +41,17 @@ Global
 		{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{7DB82231-C9B5-4FD9-A6EC-A10A7CC9F8F1}.Debug|iPhone.Build.0 = Debug|iPhone
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Release|Any CPU.Build.0 = Release|iPhone
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Release|iPhone.ActiveCfg = Release|iPhone
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Release|iPhone.Build.0 = Release|iPhone
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}.Debug|iPhone.Build.0 = Debug|iPhone
 	EndGlobalSection
 EndGlobal

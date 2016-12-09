@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace VoiceRecognition.Ios
+namespace CanI.Ios
 {
 	[Register ("VoiceRecognitionView")]
 	partial class VoiceRecognitionView

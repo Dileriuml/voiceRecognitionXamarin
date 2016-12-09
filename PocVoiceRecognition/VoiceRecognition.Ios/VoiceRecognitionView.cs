@@ -7,10 +7,15 @@ using AVFoundation;
 
 // Hi
 
-namespace VoiceRecognition.Ios
+namespace CanI.Ios
 {
 	public partial class VoiceRecognitionView : UIViewController
 	{
+		public AppDelegate ThisApp
+		{
+			get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+		}
+
 		private AVAudioEngine audioEngine = new AVAudioEngine();
 		private SFSpeechRecognizer speechRecognizer = new SFSpeechRecognizer();
 
@@ -21,9 +26,13 @@ namespace VoiceRecognition.Ios
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
+			// Register with app delegate
+			ThisApp.Controller = this;
+
 			RecognizeButton.TouchUpInside += RecognizeButtonTouchUpInside;
 			RecognizeButton.Enabled = false;
-			SFSpeechRecognizer.RequestAuthorization(HandleVoiceAuthorization);
+			SFSpeechRecognizer.RequestAuthorization(HandleVoiceAuthorization);	
 		}
 
 		public override void DidReceiveMemoryWarning()
@@ -39,11 +48,15 @@ namespace VoiceRecognition.Ios
 
 			RecognizeButton.Enabled = true;
 
-			if (!string.IsNullOrEmpty(recognized))
-			{
-				TextField.Text = recognized;
-			}
+			HandleText(recognized);
+		}
 
+		public void HandleText(string text)
+		{
+			if (string.IsNullOrEmpty(text))
+				return;
+
+			TextField.Text = text;
 		}
 
 		public async Task<string> RecognizeAsync()

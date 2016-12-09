@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace VoiceRecognition.Ios
+namespace CanI.Ios
 {
 	public class Application
 	{
