@@ -1,12 +1,6 @@
 ﻿<Properties StartupConfiguration="{D826573E-B040-40C5-A3D7-F135268128E2}|Default">
-  <MonoDevelop.Ide.ItemProperties.CanI AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PocVoiceRecognition/MainActivity.cs">
-    <Files>
-      <File FileName="VoiceRecognition.Ios/VoiceRecognitionView.cs" Line="73" Column="5" />
-      <File FileName="PocVoiceRecognition/MainActivity.cs" Line="68" Column="7" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Catchpoint enabled="false" exceptionName="System.Exception" includeSubclasses="True" />
@@ -14,4 +8,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.VoiceRecognition.Ios PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7A6F388B-65DB-4D47-9EC8-CE9439E0C9B7" />
+  <MonoDevelop.Ide.ItemProperties.CanI.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.TA063009ZV" />
+  <MonoDevelop.Ide.ItemProperties.CanI.Ios PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7A6F388B-65DB-4D47-9EC8-CE9439E0C9B7" />
 </Properties>

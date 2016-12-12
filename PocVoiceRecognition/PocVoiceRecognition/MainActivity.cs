@@ -4,11 +4,13 @@ using Android.OS;
 using Android.Speech;
 using Android.Content;
 using Java.Util;
+using PocVoiceRecognition.CanI.Droid.Common;
 
 namespace PocVoiceRecognition
 {
-	[Activity(Label = "Can I", MainLauncher = true, Icon = "@mipmap/icon")]
-	[IntentFilter(new[] { "com.google.android.gms.actions.SEARCH_ACTION" }, Label = "Can I", Categories = new[] { "android.intent.category.DEFAULT" })]
+	[Activity(Label = "Init", MainLauncher = true, Icon = "@mipmap/icon")]
+	[IntentFilter(new[] { Intent.ActionSearch, Intent.ActionView, CommonIntents.VoiceSearchAction },
+		Categories = new[] { Intent.CategoryDefault })]
 	public class MainActivity : Activity
 	{
 		private const int VoiceCode = 100;
@@ -28,7 +30,7 @@ namespace PocVoiceRecognition
 
 			button.Click += ButtonClick;
 
-			if (Intent.Action == Intent.ActionSearch)
+			if (Intent.Action == Intent.ActionSearch || Intent.Action == CommonIntents.VoiceSearchAction)
 			{
 				var queryContent = Intent.GetStringExtra(SearchManager.Query);
 				// You can perform search from here
