@@ -62,14 +62,13 @@ namespace CanIIntents
 			info.Add(new NSString("message"), new NSString(intent.Content));
 
 			// Populate Activity
-			userActivity.Title = "CanI Request";
 			userActivity.UserInfo = info;
 
 			// Add App Search ability
-			userActivity.EligibleForHandoff = true;
-			userActivity.EligibleForSearch = true;
-			userActivity.EligibleForPublicIndexing = true;
-			userActivity.BecomeCurrent();
+			//userActivity.EligibleForHandoff = true;
+			//userActivity.EligibleForSearch = true;
+			//userActivity.EligibleForPublicIndexing = true;
+			//userActivity.BecomeCurrent();
 
 			// Assemble response and send it
 			var response = new INSendMessageIntentResponse(INSendMessageIntentResponseCode.InProgress, userActivity);

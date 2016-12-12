@@ -49,7 +49,7 @@ namespace CanI.Ios
 			switch (userActivity.ActivityType)
 			{
 				case "com.trinetix.handlemessage":
-					Controller.HandleText(userActivity.UserInfo.ValueForKey(new NSString("message")).ToString());
+					Controller.HandleMessage(userActivity.UserInfo.ValueForKey(new NSString("message")).ToString());
 					break;
 			}
 

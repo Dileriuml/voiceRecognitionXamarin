@@ -4,6 +4,7 @@ using Speech;
 using UIKit;
 using Foundation;
 using AVFoundation;
+using CoreSpotlight;
 
 // Hi
 
@@ -33,6 +34,24 @@ namespace CanI.Ios
 			RecognizeButton.TouchUpInside += RecognizeButtonTouchUpInside;
 			RecognizeButton.Enabled = false;
 			SFSpeechRecognizer.RequestAuthorization(HandleVoiceAuthorization);	
+
+			// Create attributes to describe an item
+			var attributes = new CSSearchableItemAttributeSet();
+			attributes.Title = "Recognize what i will say";
+			attributes.ContentDescription = "Test speech recognition API.";
+
+			// Create item
+			var item = new CSSearchableItem("1", "SpeechRecognition", attributes);
+
+			// Index item
+			CSSearchableIndex.DefaultSearchableIndex.Index(new CSSearchableItem[] { item }, (error) =>
+			{
+				// Successful?
+				if (error != null)
+				{
+					Console.WriteLine(error.LocalizedDescription);
+				}
+			});
 		}
 
 		public override void DidReceiveMemoryWarning()
@@ -48,10 +67,10 @@ namespace CanI.Ios
 
 			RecognizeButton.Enabled = true;
 
-			HandleText(recognized);
+			HandleMessage(recognized);
 		}
 
-		public void HandleText(string text)
+		public void HandleMessage(string text)
 		{
 			if (string.IsNullOrEmpty(text))
 				return;

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>CanI</string>
+	<string>SandBox</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.trinetix.cani</string>
 	<key>CFBundleShortVersionString</key>
@@ -42,7 +42,7 @@
 	<key>NSSiriUsageDescription</key>
 	<string>Siri Usage Required</string>
 	<key>CFBundleDisplayName</key>
-	<string>CanI</string>
+	<string>SandBox</string>
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>com.trinetix.handlemessage</string>
