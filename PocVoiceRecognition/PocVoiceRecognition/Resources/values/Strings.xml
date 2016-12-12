@@ -2,5 +2,5 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="recognize">Recognize!</string>
-	<string name="app_name">Can I</string>
+	<string name="app_name">Init</string>
 </resources>
