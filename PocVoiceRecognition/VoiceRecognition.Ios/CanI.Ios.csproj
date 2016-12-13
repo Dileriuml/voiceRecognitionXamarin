@@ -29,6 +29,7 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <MtouchTlsProvider>Default</MtouchTlsProvider>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
@@ -107,6 +108,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="AppIntentVocabulary.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

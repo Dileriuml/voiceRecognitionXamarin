@@ -55,22 +55,20 @@ namespace CanIIntents
 		{
 			// Implement your application logic to send a message here.
 
-			//var userActivity = new NSUserActivity(nameof(INSendMessageIntent));
-			var userActivity = new NSUserActivity("com.trinetix.handlemassage");
+			var userActivity = new NSUserActivity("com.trinetix.handlemessage");
 
 			// Define details
 			var info = new NSMutableDictionary();
 			info.Add(new NSString("message"), new NSString(intent.Content));
 
 			// Populate Activity
-			userActivity.Title = "Put title here";
 			userActivity.UserInfo = info;
 
 			// Add App Search ability
-			userActivity.EligibleForHandoff = true;
-			userActivity.EligibleForSearch = true;
-			userActivity.EligibleForPublicIndexing = true;
-			userActivity.BecomeCurrent();
+			//userActivity.EligibleForHandoff = true;
+			//userActivity.EligibleForSearch = true;
+			//userActivity.EligibleForPublicIndexing = true;
+			//userActivity.BecomeCurrent();
 
 			// Assemble response and send it
 			var response = new INSendMessageIntentResponse(INSendMessageIntentResponseCode.InProgress, userActivity);

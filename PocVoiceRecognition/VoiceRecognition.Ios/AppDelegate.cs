@@ -1,6 +1,7 @@
 ﻿using Foundation;
 using UIKit;
 using Intents;
+using CoreSpotlight;
 
 namespace CanI.Ios
 {
@@ -48,8 +49,14 @@ namespace CanI.Ios
 			// Take action based on the activity type
 			switch (userActivity.ActivityType)
 			{
-				case "com.trinetix.handlemassage":
-					Controller.HandleText(userActivity.UserInfo.ValueForKey(new NSString("message")).ToString());
+				case "com.trinetix.handlemessage":
+					Controller.HandleMessage(userActivity.UserInfo.ValueForKey(new NSString("message")).ToString());
+					break;
+				default:
+					if (userActivity.ActivityType == CSSearchableItem.ActionType.ToString())
+					{
+						// Display content for searchable item...
+					}
 					break;
 			}
 
