@@ -8,7 +8,7 @@ using PocVoiceRecognition.CanI.Droid.Common;
 
 namespace PocVoiceRecognition
 {
-	[Activity(Label = "Init", MainLauncher = true, Icon = "@mipmap/icon")]
+	[Activity(Label = "Can I", MainLauncher = true, Icon = "@mipmap/icon")]
 	[IntentFilter(new[] { Intent.ActionSearch, Intent.ActionView, CommonIntents.VoiceSearchAction },
 		Categories = new[] { Intent.CategoryDefault })]
 	public class MainActivity : Activity

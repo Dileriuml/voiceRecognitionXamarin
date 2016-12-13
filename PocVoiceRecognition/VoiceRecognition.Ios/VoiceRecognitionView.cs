@@ -5,8 +5,6 @@ using UIKit;
 using Foundation;
 using AVFoundation;
 
-// Hi
-
 namespace CanI.Ios
 {
 	public partial class VoiceRecognitionView : UIViewController
@@ -96,8 +94,6 @@ namespace CanI.Ios
 					taskCompletionSource?.SetResult(recognitionResult.BestTranscription.FormattedString);
 				}
 			});
-
-
 
 			var result = await taskCompletionSource.Task;
 			taskCompletionSource = null;
