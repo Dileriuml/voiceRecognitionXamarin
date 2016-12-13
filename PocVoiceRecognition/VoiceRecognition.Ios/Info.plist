@@ -46,6 +46,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>com.trinetix.handlemessage</string>
+		<string>com.xamarin.platform</string>
 	</array>
 </dict>
 </plist>

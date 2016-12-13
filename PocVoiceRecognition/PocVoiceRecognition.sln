@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanI.Ios", "VoiceRecognitio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intents.Ios", "Intents.Ios\Intents.Ios.csproj", "{75E3AD1E-EB25-4011-9FF5-16A442C7A1F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanI.Droid", "PocVoiceRecognition\CanI.Droid.csproj", "{D826573E-B040-40C5-A3D7-F135268128E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanI", "PocVoiceRecognition\CanI.csproj", "{D826573E-B040-40C5-A3D7-F135268128E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

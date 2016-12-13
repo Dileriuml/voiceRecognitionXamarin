@@ -5,6 +5,7 @@ using UIKit;
 using Foundation;
 using AVFoundation;
 using CoreSpotlight;
+using MobileCoreServices;
 
 // Hi
 
@@ -33,15 +34,40 @@ namespace CanI.Ios
 
 			RecognizeButton.TouchUpInside += RecognizeButtonTouchUpInside;
 			RecognizeButton.Enabled = false;
-			SFSpeechRecognizer.RequestAuthorization(HandleVoiceAuthorization);	
+			SFSpeechRecognizer.RequestAuthorization(HandleVoiceAuthorization);
 
+			SetupUserActionSearch();
+
+			SetupCoreSpotlightSearch();
+		}
+
+		private void SetupUserActionSearch()
+		{
+			// Create App Search Activity
+			var activity = new NSUserActivity("com.xamarin.platform");
+
+			// Define details
+			var info = new NSMutableDictionary();
+			info.Add(new NSString("link"), new NSString("http://xamarin.com/platform"));
+
+			// Populate Activity
+			activity.Title = "The Xamarin Platform";
+			activity.UserInfo = info;
+
+			// Add App Search ability
+			activity.EligibleForSearch = true;
+			activity.BecomeCurrent();
+		}
+
+		private void SetupCoreSpotlightSearch()
+		{
 			// Create attributes to describe an item
-			var attributes = new CSSearchableItemAttributeSet();
-			attributes.Title = "Recognize what i will say";
-			attributes.ContentDescription = "Test speech recognition API.";
+			var attributes = new CSSearchableItemAttributeSet(UTType.Data);
+			attributes.Title = "Test Cloud";
+			attributes.ContentDescription = "Automatically test your app on 1,000 devices in the cloud.";
 
 			// Create item
-			var item = new CSSearchableItem("1", "SpeechRecognition", attributes);
+			var item = new CSSearchableItem("1", "products", attributes);
 
 			// Index item
 			CSSearchableIndex.DefaultSearchableIndex.Index(new CSSearchableItem[] { item }, (error) =>
